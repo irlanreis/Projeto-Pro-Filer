@@ -16,7 +16,7 @@ def find_file_by_name(context, search_term, case_sensitive=True):
         return []
 
     found_files = []
-    search_term_lower = search_term.lower
+    search_term_lower = search_term.lower()
 
     for path in context["all_files"]:
         file_name = path.split("/")[-1]
