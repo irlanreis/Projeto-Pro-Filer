@@ -54,7 +54,7 @@ def test_error_show_preview_error():
 
 
 def test_show_preview_empyt_arguments(capsys):
-    show_preview({"all_file": [], "all_dirs": []})
+    show_preview({"all_files": [], "all_dirs": []})
     captured_file = capsys.readouterr()
 
-    assert captured_file == "Found 0 files and 0 directories\n"
+    assert captured_file.out == "Found 0 files and 0 directories\n"
